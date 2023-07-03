@@ -39,7 +39,8 @@ export default async function Rogaine({ params }: { params: { rogaineId: string 
     const { title, coordinates, contentHtml } = await getRogaineData(rogaineId)
     
     // link all urls
-    const linkedHtml = contentHtml.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+    const linkedHtml = contentHtml.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
 
     return (
         <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
