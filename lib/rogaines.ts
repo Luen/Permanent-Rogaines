@@ -29,8 +29,7 @@ export function getSortedRogainesData() {
         // Combine the data with the id
         return Rogaine
     });
-    // Sort rogaines
-    return allRogainesData.sort((a, b) => a.title < b.title ? 1 : -1);
+    return allRogainesData;
 }
 
 export async function getRogaineData(id: string) {

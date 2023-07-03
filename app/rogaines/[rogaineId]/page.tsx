@@ -11,12 +11,12 @@ export function generateStaticParams() {
     }))
 }
 
-export function generateMetadata({ params }: { params: { postId: string } }) {
+export function generateMetadata({ params }: { params: { rogaineId: string } }) {
 
     const rogaines = getSortedRogainesData()
-    const { postId } = params
+    const { rogaineId } = params
 
-    const rogaine = rogaines.find(rogaine => rogaine.id === postId)
+    const rogaine = rogaines.find(rogaine => rogaine.id === rogaineId)
 
     if (!rogaine) {
         return {
@@ -29,14 +29,14 @@ export function generateMetadata({ params }: { params: { postId: string } }) {
     }
 }
 
-export default async function Rogaine({ params }: { params: { postId: string } }) {
+export default async function Rogaine({ params }: { params: { rogaineId: string } }) {
 
     const rogaines = getSortedRogainesData()
-    const { postId } = params
+    const { rogaineId } = params
 
-    if (!rogaines.find(rogaine => rogaine.id === postId)) notFound()
+    if (!rogaines.find(rogaine => rogaine.id === rogaineId)) notFound()
 
-    const { title, coordinates, contentHtml } = await getRogaineData(postId)
+    const { title, coordinates, contentHtml } = await getRogaineData(rogaineId)
     
     // link all urls
     const linkedHtml = contentHtml.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
