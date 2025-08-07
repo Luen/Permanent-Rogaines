@@ -11,10 +11,10 @@ export function generateStaticParams() {
     }))
 }
 
-export function generateMetadata({ params }: { params: { rogaineId: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ rogaineId: string }> }) {
 
     const rogaines = getSortedRogainesData()
-    const { rogaineId } = params
+    const { rogaineId } = await params
 
     const rogaine = rogaines.find(rogaine => rogaine.id === rogaineId)
 
@@ -29,10 +29,10 @@ export function generateMetadata({ params }: { params: { rogaineId: string } }) 
     }
 }
 
-export default async function Rogaine({ params }: { params: { rogaineId: string } }) {
+export default async function Rogaine({ params }: { params: Promise<{ rogaineId: string }> }) {
 
     const rogaines = getSortedRogainesData()
-    const { rogaineId } = params
+    const { rogaineId } = await params
 
     if (!rogaines.find(rogaine => rogaine.id === rogaineId)) notFound()
 
