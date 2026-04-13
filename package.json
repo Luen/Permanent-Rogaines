@@ -20,7 +20,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/escape-html": "^1.0.4",
     "@types/node": "^18.16.18",
@@ -29,7 +29,7 @@
     "eslint": "^9.20.1",
     "eslint-config-next": "16.2.3",
     "postcss": "^8.4.31",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.2"
   },
   "overrides": {
     "@types/react": "19.2.14",
