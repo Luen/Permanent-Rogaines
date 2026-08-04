@@ -11,29 +11,29 @@
   "dependencies": {
     "escape-html": "^1.0.3",
     "gray-matter": "^4.0.3",
-    "next": "16.2.11",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "react-icons": "^5.5.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/escape-html": "^1.0.4",
     "@types/node": "^18.16.18",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "eslint": "^9.20.1",
-    "eslint-config-next": "16.2.6",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "eslint": "10.8.0",
+    "eslint-config-next": "16.3.0",
     "postcss": "^8.5.10",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.3.3"
   },
   "overrides": {
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
     "postcss": "^8.5.10"
   }
 }
