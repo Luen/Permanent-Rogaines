@@ -37,7 +37,7 @@
     "postcss": "^8.5.26",
     "@humanfs/node": ">=0.16.8",
     "gray-matter": {
-      "js-yaml": "^3.15.1"
+      "js-yaml": "3.15.2"
     },
     "js-yaml": "3.15.2",
     "js-yaml@3": "3.15.2",
