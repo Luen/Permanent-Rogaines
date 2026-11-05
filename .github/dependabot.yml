@@ -9,3 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+
+  # Monthly checks for GitHub Actions version bumps
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    target-branch: "main"
